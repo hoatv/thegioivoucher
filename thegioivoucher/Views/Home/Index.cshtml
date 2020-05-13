@@ -1,0 +1,42 @@
+﻿@model IEnumerable<thegioivoucher.Models.User>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@*<div class="text-center">
+        <h1 class="display-4">Welcome</h1>
+        <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    </div>*@
+
+<table class="table table-bordered table-sm table-striped">
+    <thead>
+        <tr>
+        <th>Id</th>
+        <th>Username</th>
+        <th>Password</th>
+        <th>Status</th>
+        <th>Created Date</th>
+        <th>Updated Date</th>
+    </thead>
+    <tbody>
+        @if (Model == null)
+        {
+            <tr><td colspan="7" class="text-center">No Model Data</td></tr>
+        }
+        else
+        {
+            @foreach (var p in Model)
+            {
+                <tr>
+                    <td>@p.Id</td>
+                    <td>@p.Username</td>
+                    <td>@p.Password</td>
+                    <td>@p.Status</td>
+                    <td>@string.Format("{0:dddd, dd MMMM yyyy}", p.CreatedDate)</td>
+                    <td>@string.Format("{0:dddd, dd MMMM yyyy}", p.UpdatedDate)</td>
+
+                </tr>
+            }
+        }
+    </tbody>
+</table>
