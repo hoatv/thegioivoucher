@@ -1,4 +1,4 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 /*!
  * CoreUI - Open Source Dashboard UI Kit
  * @version v2.1.1
@@ -1618,11 +1618,11 @@
 }
 
 .callout {
-  position: relative;
-  padding: 0 1rem;
-  margin: 1rem 0;
-  border-left: 4px solid #c8ced3;
-  border-radius: 0.25rem;
+    position: relative;
+    padding-left: 5px;
+    margin: 1rem 0;
+    border-left: 4px solid #c8ced3;
+    border-radius: 0.25rem;
 }
 
 .callout .chart-wrapper {

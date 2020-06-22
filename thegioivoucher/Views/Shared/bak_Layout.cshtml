@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
     <environment include="Development">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <!-- VENDOR CSS -->
         <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
         <!-- Icons-->
@@ -23,7 +22,6 @@
     </environment>
     <environment exclude="Development">
         <!-- VENDOR CSS -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
         <link href="~/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
         <link href="~/lib/coreui/icons/css/coreui-icons.min.css" rel="stylesheet" />
@@ -31,8 +29,7 @@
         <link href="~/lib/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" />
         <link href="~/lib/pace-progress/css/pace.css" rel="stylesheet" />
         <!-- MAIN CSS -->
-        @*<link href="~/lib/coreui/css/style.min.css" rel="stylesheet" />*@
-        <link href="~/lib/coreui/css/style.css" rel="stylesheet" />
+        <link href="~/lib/coreui/css/style.min.css" rel="stylesheet" />
 
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
     </environment>
@@ -55,39 +52,34 @@
     <div class="app-body">
 
         <!-- LEFT SIDEBAR -->
-        @*<partial name="_SideBar" />*@
+        <partial name="_SideBar" />
         <!-- END LEFT SIDEBAR -->
         <!-- MAIN CONTENT -->
 
         <main class="main">
 
-
-            <div class="container-fluid">
-                <div class="animated fadeIn">
-                        <!-- Breadcrumb-->
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item">Home</li>
-                            <li class="breadcrumb-item">
-                                <a href="#">Admin</a>
-                            </li>
-                            <li class="breadcrumb-item active">Dashboard</li>
-                            <!-- Breadcrumb Menu-->
-                            <li class="breadcrumb-menu d-md-down-none">
-                                <div class="btn-group" role="group" aria-label="Button group">
-                                    <a class="btn" href="#">
-                                        <i class="icon-speech"></i>
-                                    </a>
-                                    <a class="btn" href="./">
-                                        <i class="icon-graph"></i>  Dashboard
-                                    </a>
-                                    <a class="btn" href="#">
-                                        <i class="icon-settings"></i>  Settings
-                                    </a>
-                                </div>
-                            </li>
-                        </ol>
-                </div>
-            </div>
+            <!-- Breadcrumb-->
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">Home</li>
+                <li class="breadcrumb-item">
+                    <a href="#">Admin</a>
+                </li>
+                <li class="breadcrumb-item active">Dashboard</li>
+                <!-- Breadcrumb Menu-->
+                <li class="breadcrumb-menu d-md-down-none">
+                    <div class="btn-group" role="group" aria-label="Button group">
+                        <a class="btn" href="#">
+                            <i class="icon-speech"></i>
+                        </a>
+                        <a class="btn" href="./">
+                            <i class="icon-graph"></i>  Dashboard
+                        </a>
+                        <a class="btn" href="#">
+                            <i class="icon-settings"></i>  Settings
+                        </a>
+                    </div>
+                </li>
+            </ol>
 
             @RenderBody()
         </main>
