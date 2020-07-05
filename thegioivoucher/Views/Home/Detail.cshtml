@@ -1,0 +1,97 @@
+﻿@model IEnumerable<thegioivoucher.Models.User>
+@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="row">
+    <div class="col-lg-8 col-sm-12">
+        <div class="coupon__item ">
+            <div class="coupon__top row">
+                <div class="col-md-3 col-sm-12">
+                    <div class="coupon__action">
+                        <div class="coupon__image" style="">
+                            <img class="img-avatar img-responsive" src="~/img/category/category_img_mom.png" style="max-width: 100%;height: auto;" />
+                        </div>
+                        <div class="coupon__getcoupon">
+                            <a href="#" class="cta">
+                                <span>Nhận mã</span>
+                                <svg width="10px" height="10px" viewBox="0 0 13 10">
+                                    <path d="M1,5 L11,5"></path>
+                                    <polyline points="8 1 12 5 8 9" stroke="white"></polyline>
+                                </svg>
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9 col-sm-12">
+                    <div class="coupon__content" style=""> 
+                        <div class="coupon__title">
+                            <a href="#">Free ship cho đơn hàng từ 99k</a>
+                        </div>
+                        <div class="coupon__status  d-flex">
+                            <div class="coupon__verify font-weight--black d-flex">
+                                <span class="fa fa-calendar-check-o"></span>
+                                Còn hiệu lực
+                            </div>
+                            <div class="coupon__used d-flex">
+                                <span class="fa fa-users" style="color: #999;" alt="Người đã dùng"></span>
+                                <span style="font-weight:600" alt="Người đã dùng">68</span>
+                            </div>
+                        </div>
+
+                        <div class="coupon__category d-flex">
+                            <span class="fa fa-list-ul"></span>
+                            <a href="aaaaa">Mẹ và Bé</a>
+                        </div>
+                        <div class="coupon__attention">
+                            <span class="fa fa-bell"></span>
+                            <input class="read-more-state" id="read-more-controller" type="checkbox">
+                            <label class="read-more-trigger" for="read-more-controller"></label>
+                            <div class="read-more-wrap">
+                                <p class="read-more-target">
+                                    <b>Áp dụng cho đơn hàng từ 1,500,000 trở lên.</b><br />
+
+                                    – Thời gian: Từ 9h đến 24h thứ 6, thứ 7 hàng tuần (21/02 – 31/08/2020). Chương trình có thể kết thúc sớm hơn dự kiến.<br />
+
+                                    – Chỉ áp dụng cho 50 chủ thẻ có giao dịch hợp lệ đầu tiên mỗi ngày.<br />
+
+                                    – Chương trình áp dụng cho các ngành hàng: Điện thoại – Máy tính bảng, Phụ kiện số – Thiết bị số, Laptop – IT, Camera, Mẹ bé (trừ sản phẩm sữa, tã), Làm đẹp – sức khoẻ, Thời trang, Phụ kiện ô tô – xe máy<br />
+
+                                    – Chỉ áp dụng cho nhà phân phối TIKI Trading<br />
+
+                                    – Để nhận được ưu đãi, ở bước thanh toán, khách hàng chọn phương thức “Thẻ Sacombank giảm 150k cho đơn hàng từ 1.5 triệu đồng – ưu đãi thứ 6, thứ 7”<br />
+
+                                    * Để biết thêm chi tiết về chương trình, vui lòng liên hệ hotline Tiki: 1900-6035 (từ 8h đến 21h, kể cả T7 & CN) hoặc gửi thông tin về hotro@tiki.vn.<br />
+
+                                    Chi tiết chương trình tại đây.<br />
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-md-4">
+        CATEGORY
+
+
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $("#read_more").on('click', function (event) {
+            document.querySelector('.coupon__attention__description').style.height = 'auto';
+            this.style.display = 'none';
+        });
+
+    });
+
+</script>
