@@ -62,33 +62,33 @@ namespace thegioivoucher.Controllers
         {
 
             List<User> listUser = new List<User>();
-            string connectionString = Configuration["ConnectionStrings:DefaultConnection"];
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                //SqlDataReader
-                connection.Open();
+            //string connectionString = Configuration["ConnectionStrings:DefaultConnection"];
+            //using (SqlConnection connection = new SqlConnection(connectionString))
+            //{
+            //    //SqlDataReader
+            //    connection.Open();
 
-                string sql = "Select * From Users";
-                SqlCommand command = new SqlCommand(sql, connection);
+            //    string sql = "Select * From Users";
+            //    SqlCommand command = new SqlCommand(sql, connection);
 
-                using (SqlDataReader dataReader = command.ExecuteReader())
-                {
-                    while (dataReader.Read())
-                    {
-                        User user = new User();
-                        user.Id = Convert.ToInt32(dataReader["id"]);
-                        user.Username = Convert.ToString(dataReader["username"]);
-                        user.Password = Convert.ToString(dataReader["password"]);
-                        user.Status = Convert.ToString(dataReader["status"]);
-                        user.CreatedDate = Convert.ToDateTime(dataReader["created_date"]);
-                        user.UpdatedDate = Convert.ToDateTime(dataReader["updated_date"]);
+            //    using (SqlDataReader dataReader = command.ExecuteReader())
+            //    {
+            //        while (dataReader.Read())
+            //        {
+            //            User user = new User();
+            //            user.Id = Convert.ToInt32(dataReader["id"]);
+            //            user.Username = Convert.ToString(dataReader["username"]);
+            //            user.Password = Convert.ToString(dataReader["password"]);
+            //            user.Status = Convert.ToString(dataReader["status"]);
+            //            user.CreatedDate = Convert.ToDateTime(dataReader["created_date"]);
+            //            user.UpdatedDate = Convert.ToDateTime(dataReader["updated_date"]);
 
-                        listUser.Add(user);
-                    }
-                }
+            //            listUser.Add(user);
+            //        }
+            //    }
 
-                connection.Close();
-            }
+            //    connection.Close();
+            //}
             return View(listUser);
         }
 
