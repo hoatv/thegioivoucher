@@ -16059,7 +16059,7 @@ a {
 
 
 /*===== Navigation =====*/
-.owl_wrapper .prev, .owl_wrapper .next {
+/*.owl_wrapper .prev, .owl_wrapper .next {
     position: absolute;
     top: 100px;
     left: 100px;
@@ -16084,7 +16084,7 @@ a {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-}
+}*/
 
 
 

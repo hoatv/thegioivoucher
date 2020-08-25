@@ -3,25 +3,8 @@
     ViewData["Title"] = "Home Page";
 }
     
-    
+
 <div class="container">
-        <div class="owl_wrapper">
-            <div class="prev no_select"><</div>
-            <div class="owl-carousel">
-                <img src="https://picsum.photos/350/200" alt="" />
-                <img src="https://picsum.photos/350/200" alt="" />
-                <img src="https://picsum.photos/350/200" alt="" />
-                <img src="https://picsum.photos/350/200" alt="" />
-                <img src="https://picsum.photos/350/200" alt="" />
-                <img src="https://picsum.photos/350/200" alt="" />
-                <img src="https://picsum.photos/350/200" alt="" />
-                <img src="https://picsum.photos/350/200" alt="" />
-                <img src="https://picsum.photos/350/200" alt="" />
-                <img src="https://picsum.photos/350/200" alt="" />
-                <img src="https://picsum.photos/350/200" alt="" />
-            </div>
-            <div class="next no_select">></div>
-        </div>
     <div class="row">
         <div class="col-md-3">
             <div class="coupon__box">
@@ -68,22 +51,37 @@
 <script type="text/javascript">
     $(document).ready(function () {
         $('.owl-carousel').owlCarousel({
+            autoplayHoverPause: true,
+            autoplay: true,
             loop: true,
             margin: 10,
-            nav: true,
-            center:true,
+            nav: false,
+            center: true,
             responsive: {
                 0: {
-                    items: 1
+                    items: 1,
+                    nav: true
                 },
                 600: {
-                    items: 3
+                    items: 3,
+                    nav: true
                 },
                 1000: {
-                    items: 5
+                    items: 5,
+                    nav: true,
                 }
             }
-        })
+        });
+        var owl = $('.owl-carousel');
+        owl.on('mousewheel', '.owl-stage', function (e) {
+            var curr = $(this);
+            if (e.deltaY > 0) {
+                curr.trigger('next.owl');
+            } else {
+                curr.trigger('prev.owl');
+            }
+            e.preventDefault();
+        });
         //$(".owl_content").owlCarousel({
         //    rewindNav: false,
         //    addClassActive: true, //important

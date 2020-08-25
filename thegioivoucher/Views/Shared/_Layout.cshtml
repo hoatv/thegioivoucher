@@ -45,9 +45,26 @@
         <!-- END LEFT SIDEBAR -->
         <!-- MAIN CONTENT -->
 
-        <main class="main">
-            @*<div class="container-fluid">
-                    <div class="animated fadeIn">
+        <main class="main" style="margin-left: 0 !important;">
+            <div class="container-fluid" style="padding:0 !important">
+                <!-- SLIDER -->
+                <div class="owl_wrapper">
+                    <div class="owl-carousel owl-theme">
+                        <img src="https://picsum.photos/350/200" alt="" />
+                        <img src="https://picsum.photos/350/201" alt="" />
+                        <img src="https://picsum.photos/350/202" alt="" />
+                        <img src="https://picsum.photos/350/203" alt="" />
+                        <img src="https://picsum.photos/350/204" alt="" />
+                        <img src="https://picsum.photos/350/205" alt="" />
+                        <img src="https://picsum.photos/350/206" alt="" />
+                        <img src="https://picsum.photos/350/207" alt="" />
+                        <img src="https://picsum.photos/350/208" alt="" />
+                        <img src="https://picsum.photos/350/209" alt="" />
+                        <img src="https://picsum.photos/350/210" alt="" />
+                    </div>
+                </div>
+                <!-- END SLIDER -->
+                @*<div class="animated fadeIn">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item">Home</li>
                                 <li class="breadcrumb-item">
@@ -68,10 +85,11 @@
                                     </div>
                                 </li>
                             </ol>
-                    </div>
-                </div>*@
+                    </div>*@
 
-            @RenderBody()
+
+                @RenderBody()
+            </div>
         </main>
         <!-- END MAIN CONTENT -->
         <!-- ASIDE MENU -->
